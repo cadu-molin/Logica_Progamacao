@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Desenho canvas</title>
+</head>
+<body style=" background-color: rgb(0, 0, 0); ">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'black';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'blue';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'blue';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+
+</script>
+</body>
+</html>
